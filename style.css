@@ -35,3 +35,29 @@ th:hover {
 tr:hover td {
   background-color: #f9f9f9;
 }
+h1 {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.2em;
+}
+
+/* Minimalist, subtle h3 */
+h3 {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.35em;
+  font-weight: 600;
+  color: #4d4d4d;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  border-left: 4px solid #e0e0e0;
+  padding-left: 0.6em;
+}
