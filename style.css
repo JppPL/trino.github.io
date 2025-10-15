@@ -1,7 +1,6 @@
 body {
   font-family: system-ui, sans-serif;
   background-color: #fafafa;
-  display: flex;
   justify-content: center;
   align-items: start;
   padding: 40px;
