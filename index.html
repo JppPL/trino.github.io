@@ -1,1 +1,46 @@
-<h1>Trino Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <table id="sortable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Name</th>
+        <th onclick="sortTable(1)">Age</th>
+        <th onclick="sortTable(2)">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>John</td><td>25</td><td>USA</td></tr>
+      <tr><td>Alice</td><td>30</td><td>UK</td></tr>
+      <tr><td>Maria</td><td>28</td><td>Spain</td></tr>
+      <tr><td>Daniel</td><td>32</td><td>France</td></tr>
+      <tr><td>Lisa</td><td>23</td><td>Germany</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    let sortDirection = true;
+    function sortTable(columnIndex) {
+      const table = document.getElementById("sortable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      const dir = sortDirection ? 1 : -1;
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].innerText.trim();
+        const bText = b.cells[columnIndex].innerText.trim();
+        return aText.localeCompare(bText, undefined, {numeric:true}) * dir;
+      });
+
+      rows.forEach(row => tbody.appendChild(row));
+      sortDirection = !sortDirection;
+    }
+  </script>
+</body>
+</html>
